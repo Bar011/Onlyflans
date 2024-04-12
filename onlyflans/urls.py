@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from web.views import index, about, welcome #Importamos las views de la app web
+
+#Creación de las rutas de la app web
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    #El index no tiene un nombre, por ser la pagina principal
+    path('', index, name = "index"), 
+    path('about/', about, name = "about"),
+    path('welcome/', welcome, name = "welcome")
+    ]
