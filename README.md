@@ -16,3 +16,17 @@
 ### Servidor funcional: 
 
 ![Hito_1_servidor_arriba](https://github.com/Bar011/Onlyflans/assets/65033110/b27d48a3-2105-43ae-93ab-7f5af30f6644)
+
+## Hito 2: Implementación de Bootstrap
+
+### Vista del Index:
+
+![hito2-index](https://github.com/Bar011/Onlyflans/assets/65033110/56c6ae84-d685-4e27-be18-93f3d53affac)
+
+### Vista de "Bienvnidos":
+
+![hito2-welcome](https://github.com/Bar011/Onlyflans/assets/65033110/135f1522-5abd-4493-bdb7-778124b0ce47)
+
+### Vista de "Acerca de..."
+
+![hito2-about](https://github.com/Bar011/Onlyflans/assets/65033110/fc09d46c-aeb9-4441-9829-0e116a3e5d47)
