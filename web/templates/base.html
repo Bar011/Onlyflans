@@ -7,8 +7,11 @@
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <title>{%block 'title'%}Bienvenido a Only flans{%endblock%}</title>
+      <script src="https://kit.fontawesome.com/384e83612b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!--navbar-->
 
     {% block 'navbar'%}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,6 +34,20 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href={% url "contact" %}>Contact</a>
               </li>
+            </ul>
+            <!--login-->
+            <ul class="navbar-nav ml-auto">
+              {% if user.is_authenticated %} <!--Si el user está autenticado muestra el nombre-->
+              <li class="nav-item">
+                 <p>bienvenido {{ user.username }}<a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a></p>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
+              </li>
+              {% endif %}
+          </ul>
+        <!-- -->
           </div>
         </div>
       </nav>
@@ -47,17 +64,131 @@
     </div>
     {% endblock %}
 
+
     <!--Bloque que se encarga del contenido de la pagina-->
     {% block 'contenido' %}
-        <div style=" background: white;">
-    contenido</div>
+        <div style=" background: white;">contenido</div>
     {% endblock %}
+
 
     <!--Bloque que se encarga del pie de página-->
     {% block 'footer' %}
-        <div style=" background: white; text-align: center;" >Sitio creado por Beatriz Mariana Álvarez Rojas</div>
-    {% endblock %}
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>¡Visítanos en nuestras Redes Sociales!</span>
+    </div>
+    <!-- Left -->
 
+    <!-- Right -->
+    <div>
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook fa-2xl"></i></a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter fa-2xl"></i></a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google fa-2xl"></i></a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram fa-2xl"></i></a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-tiktok fa-2xl"></i></a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github fa-2xl"></i></a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Only Flans</h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Productos
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Flans</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Flans Premiums</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Link de utilidad
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Precios</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Configuración</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Ordenes</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Ayuda</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">¿Donde nos ubicamos?</h6>
+          <p><i class="fas fa-home me-3"></i> Ovalle, Coquimbo, Chile</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            ContactoOnlyFlans@Onlyflans.cl
+          </p>
+          <p><i class="fas fa-phone me-3"></i> +56 9 2233 4455</p>
+          <p><i class="fas fa-print me-3"></i> +56 9 6677 8899</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="#">Onlyflans.cl</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+
+
+
+    {% endblock %}
     <!--Bloque que contiene javascript-->
     {%block 'javascript'%}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

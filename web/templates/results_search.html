@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block 'contenido' %}
+<div class="container p-5">
+    {% if 'buscador' %}
+        <p class="mt-4 mb-2 fs-3">Estos flanes encontramos:</p>
+        <div class="row">
+            {% for flan in flanes %}
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-5 mb-2">
+                <div class="card shadow">
+                    <img src="{{flan.image_url}}" class="img-fluid" alt=" flan">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ flan.name }}</h5>
+                    <p class="card-text">{{flan.description}}</p>
+                    </div>
+                </div>
+            </div> 
+            {% endfor %}
+        </div>
+    {% else %}
+    <p class="my-4 fs-3">No has realizado tu búsqueda aún.</p>
+    {% endif %}
+    {% block 'buscador' %}
+    {% include 'flan_search.html' %}
+    {% endblock %}
+</div>
+{% endblock 'contenido' %}

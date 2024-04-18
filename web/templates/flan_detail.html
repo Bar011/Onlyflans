@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block 'contenido' %}
+{% if flan.is_private and not user.is_authenticated %}
+    Acceso no permitido
+    {%else%}
+        {{flan.name}}
+        {{flan.description}}
+        <img src="{{ flan.image_url }}" alt="{{ flan.name }}">
+    {%endif%}
+{% endblock %}

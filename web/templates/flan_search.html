@@ -1,0 +1,13 @@
+<!-- Acá se crea el bloque HTML específico para el buscador. -->
+<div class="mt-5 text">
+    <p class="my-4 fs-3">Encuentra tu flan:</p>
+    <form action="{% url 'search' %}" method="post" class="row ps-0 mx-0 align-items-end">
+        {% csrf_token %}
+        <div class="ps-0 mb-3 mb-lg-0 col-12 col-lg-4 col-xl-4 d-flex">
+            <input class="form-control rounded me-2" type="search"
+            placeholder="¿Qué flan estás buscando?" aria-label="Encuentra tu flan"
+            name="buscador">
+            <button id="submit" class="btn btn-light btn-rounded" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>

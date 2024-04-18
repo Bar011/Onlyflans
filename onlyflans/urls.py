@@ -15,8 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from web.views import index, about, welcome, contact, success 
+from django.urls import path, include
+from web.views import index, about, welcome, contact, success, flan_search
+from web import views 
 #Importamos las views de la app web
 
 #Creación de las rutas de la app web
@@ -29,4 +30,7 @@ urlpatterns = [
     path('welcome/', welcome, name = "welcome"),
     path('contact/', contact, name = "contact"),
     path('success/', success, name = "success"),
+    path('registration/', include("django.contrib.auth.urls")), #Esto es para las rutas de logueo de Django
+    path('flan/<int:flan_id>', views.flan_detail, name = "detail"),
+    path('flan_search/', flan_search, name = "search"),
     ]

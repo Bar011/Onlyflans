@@ -2,6 +2,7 @@
 {% extends 'base.html' %}
 {% block 'contenido' %}
 <h1 style="text-align: center;">Productos</h1>
+<h2> ¡Bienvenido! {{user.username}} </h2>
 <div class="row p-5">
 {%for flan in flanes%}
 <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-5 mb-2">
@@ -10,7 +11,7 @@
         <div class="card-body">
         <h5 class="card-title">{{flan.name}}</h5>
         <p class="card-text">{{flan.description}}</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <a href = {% url 'detail' flan.id %} class="btn btn-primary">Detalle</a>
       </div>
     </div>
   </div>

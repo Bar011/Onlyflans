@@ -63,6 +63,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'onlyflans.urls'
 
+#Configuración mediante alias para que no se tenga que escribir la ruta completa. 
+#Esto es para redireccionar segun se haya logueado o no a determinada vista u otra. 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'login'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
