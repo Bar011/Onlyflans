@@ -23,6 +23,8 @@ def flan_search(request):
             buscador = buscador.lower()
             # Filtrar los distintos objetos flanes para que coincidan con nuestro
             # criterio de búsqueda. En este caso, con el nombre de cada flan.
+            # __icontains lo que hace buscar todo el objeto que contenga el valor
+            # ingresado en el buscador.
             flanes_publicos = Flan.objects.filter(name__icontains=buscador, is_private =False)
             return render(request, 'results_search.html', {'flanes': flanes_publicos})
     

@@ -1,4 +1,5 @@
-<!-- Acá se crea el bloque HTML específico para el buscador. -->
+<!-- Acá se crea el bloque específico para el buscador. -->
+<!-- si le pongo extends base.html, se duplica el banner-->
 <div class="mt-5 text">
     <p class="my-4 fs-3">Encuentra tu flan:</p>
     <form action="{% url 'search' %}" method="post" class="row ps-0 mx-0 align-items-end">
@@ -11,3 +12,4 @@
         </div>
     </form>
 </div>
+
