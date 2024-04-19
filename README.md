@@ -111,5 +111,13 @@ Al cerrar sesión nos redirige a la página del login:
 
 ![Hito 4- Resultado de la busqueda](https://github.com/Bar011/Onlyflans/assets/65033110/0e5ed592-78f1-4ab2-9975-011f491c6575)
 
+### Hito 4: Visualización más detallada de un producto. 
+
+![Hito 4-Demostración de funcionalidad de ver detalles de un flan](https://github.com/Bar011/Onlyflans/assets/65033110/aab92d66-24c2-449a-bced-6f72ca9c57ec)
+
+Vista en detalle de un flan, en este caso, un flan de frutilla:
+
+![hito 4 - Detalle de flan](https://github.com/Bar011/Onlyflans/assets/65033110/64ae514e-2395-498c-86ac-81646744e177)
+
 
 
