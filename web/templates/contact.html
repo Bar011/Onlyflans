@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block 'contenido' %}
-   <h1 style="text-align: center;">contacto</h1>
+   <h1 style="text-align: center;">Contacto</h1>
    <form method="POST" class="container">
    {% csrf_token %}
    {{ form.non_field_errors }}
@@ -17,6 +17,8 @@
       {{ form.message.label_tag }}
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Message" name="message"></textarea>
    </div>
-   <button type="submit" class="btn btn-secondary">Enviar</button>
+   <div style="margin-top: 10px;"> 
+      <button type="submit" class="btn btn-secondary">Enviar formulario</button>
+   </div>
 </form>
 {% endblock 'contenido' %}
