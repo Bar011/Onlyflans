@@ -1,17 +1,23 @@
 {% extends 'base.html' %}
 {% block 'contenido' %}
-<div class="row p-5">
-{% if flan.is_private and not user.is_authenticated %}
-    Acceso no permitido
-    {%else%}
-    <div class="col-12 col-md-6 col-lg-4 col-xl-12 mt-5 mb-2">
-    <div class="card mb-4 md-6" style="width: 18rem;">
-        <img src="{{ flan.image_url }}" class="card" alt="{{ flan.name }}">
-        <div class="card-body">
-            <h5 class="card-title">{{flan.name}}</h5>
-            <p class="card-text"> {{flan.description}}</p>
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="row p-5">
+    {% if flan.is_private and not user.is_authenticated %}
+      <div class="col-12 text-center">
+        <p>Acceso no permitido</p>
+      </div>
+    {% else %}
+    <h1 class ="text-center">Detalle del producto</h1>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-12 mt-5 mb-2">
+        <div class="card mb-4 md-6 mx-auto my-auto" style="width: 18rem;">
+          <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ flan.name }}</h5>
+            <p class="card-text">{{ flan.description }}</p>
+          </div>
         </div>
       </div>
-    {%endif%}
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
-

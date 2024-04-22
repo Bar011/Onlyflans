@@ -17,15 +17,19 @@ def index(request): # La definición de esta funcion, maneja
 def flan_search(request):
     buscador = None
     flanes_publicos = None
+    #Verificar si la solicitud es un método POST (es decir, si se envió un formulario)
     if request.method == 'POST':
             #'buscador' guarda el valor ingresado en el formulario de búsqueda.
+            # Obtener el valor del campo de búsqueda del formulario
             buscador = request.POST['buscador']
             buscador = buscador.lower()
             # Filtrar los distintos objetos flanes para que coincidan con nuestro
             # criterio de búsqueda. En este caso, con el nombre de cada flan.
             # __icontains lo que hace buscar todo el objeto que contenga el valor
             # ingresado en el buscador.
+            # y que además no sean privados (is_private = False)
             flanes_publicos = Flan.objects.filter(name__icontains=buscador, is_private =False)
+            # Renderizar la plantilla 'results_search.html' y pasar los flanes encontrados como contexto
             return render(request, 'results_search.html', {'flanes': flanes_publicos})
     
 def about(request):
