@@ -36,8 +36,8 @@ DEBUG = True if os.getenv('DEBUG') == 'True' else False
 #print('*******************')
 #print (DEBUG)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'onlyflans-avt9.onrender.com']
-CSRF_TRUSTED_ORIGINS = ['onlyflans-avt9.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://onlyflans-avt9.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://onlyflans-avt9.onrender.com']
 
 # Application definition
 
