@@ -36,7 +36,7 @@ DEBUG = True if os.getenv('DEBUG') == 'True' else False
 #print('*******************')
 #print (DEBUG)
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'onlyflans-avt9.onrender.com']
 
 
 # Application definition
